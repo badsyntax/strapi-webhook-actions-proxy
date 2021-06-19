@@ -1,6 +1,7 @@
 # Strapi Webhook Actions Proxy
 
 [![Deploy](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/prod-deploy.yml/badge.svg)](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/prod-deploy.yml)
+[![Analyze](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/analyze.yml/badge.svg)](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/analyze.yml)
 
 A super simple & lightweight Node.js proxy to send `repository_dispatch` events to GitHub from a Strapi Webhook.
 
