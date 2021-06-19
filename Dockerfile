@@ -32,7 +32,7 @@ FROM base AS runner
 
 RUN apk add curl=7.67.0-r3 --no-cache
 
-HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
+HEALTHCHECK CMD curl --fail http://localhost:5000/healthcheck || exit 1
 
 WORKDIR /app
 
