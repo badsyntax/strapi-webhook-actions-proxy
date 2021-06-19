@@ -10,7 +10,8 @@ if (!GITHUB_TOKEN) {
   throw new Error('Env not set correctly');
 }
 
-import { indexRoute } from './routes/api/index';
+import { apiRoute } from './routes/api/index';
+import { healthCheckRoute } from './routes/healthcheck';
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(logger('dev') as RequestHandler);
 app.use(express.json() as RequestHandler);
 app.use(express.urlencoded({ extended: false }) as RequestHandler);
 
-app.use('/api', indexRoute);
+app.use('/api', apiRoute);
+app.use('/healthcheck', healthCheckRoute);
 
 export default app;

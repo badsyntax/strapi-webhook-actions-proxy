@@ -1,8 +1,8 @@
 import { Router, Request, Response } from 'express';
 import { ResponseBody, RequestBody, QueryParams } from './types';
-export const indexRoute = Router();
+export const apiRoute = Router();
 
-indexRoute.post(
+apiRoute.post(
   '/',
   async (
     req: Request<null, ResponseBody, RequestBody, QueryParams>,
