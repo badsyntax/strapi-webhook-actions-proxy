@@ -21,6 +21,6 @@ curl --header "Content-Type: application/json" \
 
 ```bash
 docker build -t ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest .
-docker run --publish 5000:5000 ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
+docker run --publish 5000:5000 --env-file .env ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
 docker push ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
 ```
