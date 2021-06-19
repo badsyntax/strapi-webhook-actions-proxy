@@ -27,7 +27,10 @@ on:
 3. Deploy the service to your server, for example:
 
 ```bash
-docker run --publish 5000:5000 --env GITHUB_TOKEN=YOURTOKEN ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
+docker run \
+  --publish 5000:5000 \
+  --env GITHUB_TOKEN=YOURTOKEN \
+  ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
 ```
 
 4. Create a new Webhook in strapi that points to the service with the following query params:
