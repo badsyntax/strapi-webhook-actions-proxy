@@ -30,7 +30,3 @@ jobs:
         uses: brpaz/hadolint-action@v1.3.1
         with:
           dockerfile: Dockerfile
-      - name: Lint staticman dockerfile
-        uses: brpaz/hadolint-action@v1.3.1
-        with:
-          dockerfile: staticman/Dockerfile
