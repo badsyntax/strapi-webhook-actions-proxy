@@ -31,11 +31,10 @@ indexRoute.post(
             client_payload: req.body,
           }),
         }
-      ).then((response) => {
-        if (!response.ok) {
-          throw new Error(response.statusText);
-        }
-      });
+      );
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
       res.status(200).send('Success');
     } catch (e) {
       const msg = 'Error calling actions endpoint';
