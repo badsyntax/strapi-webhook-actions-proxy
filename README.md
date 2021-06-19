@@ -1,4 +1,4 @@
-# Strapi Webhook Actions Proxy
+# Strapi Webhook GitHub Actions Proxy
 
 [![Deploy](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/prod-deploy.yml/badge.svg)](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/prod-deploy.yml)
 [![Analyze](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/analyze.yml/badge.svg)](https://github.com/badsyntax/strapi-webhook-actions-proxy/actions/workflows/analyze.yml)
