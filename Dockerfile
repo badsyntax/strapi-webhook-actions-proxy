@@ -42,7 +42,7 @@ LABEL org.label-schema.vcs-url="https://github.com/badsyntax/strapi-webhook-acti
 LABEL org.label-schema.usage="README.md"
 LABEL org.label-schema.vendor="badsyntax"
 
-COPY --from=deps --chown=node:node /app/node_modules /app/node_modules
+COPY --from=builder --chown=node:node /app/node_modules /app/node_modules
 COPY --from=builder --chown=node:node /app/build /app/build
 
 USER node
