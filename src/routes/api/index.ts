@@ -9,11 +9,15 @@ indexRoute.post(
     res: Response<ResponseBody>
   ) => {
     const { event_type: eventType, repo } = req.query;
-    if (!eventType) {
-      return res.status(400).send('event_type param missing');
-    }
-    if (!repo) {
-      return res.status(400).send('repo param missing');
+    try {
+      if (!eventType) {
+        throw new Error('event_type param missing');
+      }
+      if (!repo) {
+        throw new Error('repo param missing');
+      }
+    } catch (e) {
+      return res.status(400).send(e.message);
     }
 
     try {
