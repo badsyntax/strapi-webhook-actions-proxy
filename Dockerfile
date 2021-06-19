@@ -40,11 +40,6 @@ COPY . .
 
 LABEL maintainer=willis.rh@gmail.com
 LABEL org.opencontainers.image.source=https://github.com/badsyntax/strapi-webhook-actions-proxy
-LABEL org.label-schema.name="strapi-webhook-actions-proxy"
-LABEL org.label-schema.description="Strapi webhook proxy to trigger a GitHub repository_dispatch event"
-LABEL org.label-schema.vcs-url="https://github.com/badsyntax/strapi-webhook-actions-proxy"
-LABEL org.label-schema.usage="README.md"
-LABEL org.label-schema.vendor="badsyntax"
 
 COPY --from=builder --chown=node:node /app/node_modules /app/node_modules
 COPY --from=builder --chown=node:node /app/build /app/build
