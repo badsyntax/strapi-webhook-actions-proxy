@@ -30,6 +30,10 @@ RUN npm prune --production
 
 FROM base AS runner
 
+RUN apk add curl --no-cache
+
+HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
+
 WORKDIR /app
 
 COPY . .
