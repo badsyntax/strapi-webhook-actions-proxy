@@ -30,7 +30,7 @@ RUN npm prune --production
 
 FROM base AS runner
 
-RUN apk add curl --no-cache
+RUN apk add curl=7.67.0-r3 --no-cache
 
 HEALTHCHECK CMD curl --fail http://localhost:5000/ || exit 1
 
