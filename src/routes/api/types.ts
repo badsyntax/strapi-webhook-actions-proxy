@@ -2,6 +2,7 @@ export type ResponseBody = string;
 
 export type QueryParams = {
   event_type: string;
+  repo: string;
 };
 
 export enum EventType {

@@ -5,6 +5,11 @@ import 'isomorphic-fetch';
 
 dotenv.config();
 
+const { GITHUB_TOKEN } = process.env;
+if (!GITHUB_TOKEN) {
+  throw new Error('Env not set correctly');
+}
+
 import { indexRoute } from './routes/api/index';
 
 const app = express();

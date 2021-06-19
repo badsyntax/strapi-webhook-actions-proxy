@@ -14,7 +14,7 @@
 curl --header "Content-Type: application/json" \
   --request POST \
   --data '{"event":"entry.create","created_at":"2020-01-10T08:47:36.649Z","model":"example","entry":{}}' \
-  "http://localhost:5000/api?event_type=strapi_updated&repo=badsyntax/example"
+  "http://localhost:5000/api?event_type=strapi_updated&repo=badsyntax/thirlby-village"
 ```
 
 ## Build, Run, Publish Docker Image
