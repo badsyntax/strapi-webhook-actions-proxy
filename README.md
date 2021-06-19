@@ -14,7 +14,7 @@ You can't point strapi webhooks to the [repository dispatch event endpoint](http
 
 ## Usage
 
-Ensure your GitHub Actions workflow file handles the "repository_dispatch" event with your custom type:
+1. Ensure your GitHub Actions workflow file handles the "repository_dispatch" event with your custom type:
 
 ```yml
 name: Deploy
@@ -23,13 +23,15 @@ on:
     types: [strapi_updated]
 ```
 
-Deploy the service to your server, for example:
+2. Create a GitHub Personal access token with `repo` scope
+
+3. Deploy the service to your server, for example:
 
 ```bash
 docker run --publish 5000:5000 --env GITHUB_TOKEN=YOURTOKEN ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
 ```
 
-Create a new Webhook in strapi that points to the service with the following query params:
+4. Create a new Webhook in strapi that points to the service with the following query params:
 
 - `event_type`: Any string. This value must match the `repository_dispatch` type specified in your GitHub Actions workflow file.
 - `repo`: GitHub `username/repo`
