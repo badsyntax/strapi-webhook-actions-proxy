@@ -34,14 +34,14 @@ docker run \
 
 4 - Create a new Webhook in Strapi that points to the service with the following query params:
 
-   - `event_type`: Any string. This value must match the `repository_dispatch` type specified in your GitHub Actions workflow file.
-   - `repo`: GitHub `username/repo`
+- `event_type`: Any string. This value must match the `repository_dispatch` type specified in your GitHub Actions workflow file.
+- `repo`: GitHub `username/repo`
 
-   For example:
+For example:
 
-   ```
-   http://actions-proxy:5000/api?event_type=strapi_updated&repo=username/awesome-website
-   ```
+```
+http://actions-proxy:5000/api?event_type=strapi_updated&repo=username/awesome-website
+```
 
 ## Background
 
