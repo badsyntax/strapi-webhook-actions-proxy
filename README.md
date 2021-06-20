@@ -6,11 +6,7 @@
 
 A super simple & lightweight Node.js proxy to send `repository_dispatch` events to GitHub from a Strapi Webhook.
 
-Useful when you want to run a GitHub Actions workflow when changes are made in strapi.
-
-## Background
-
-You can't point strapi webhooks to the [repository dispatch event endpoint](https://docs.github.com/en/rest/reference/repos#create-a-repository-dispatch-event) as the webook request body is not compatible with the dispatches endpoint, thus a proxy is required.
+Useful when you want to run a GitHub Actions workflow when changes are made in Strapi.
 
 ## Usage
 
@@ -33,7 +29,7 @@ docker run \
   ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
 ```
 
-4. Create a new Webhook in strapi that points to the service with the following query params:
+4. Create a new Webhook in Strapi that points to the service with the following query params:
 
    - `event_type`: Any string. This value must match the `repository_dispatch` type specified in your GitHub Actions workflow file.
    - `repo`: GitHub `username/repo`
@@ -43,3 +39,15 @@ docker run \
    ```
    http://actions-proxy:5000/api?event_type=strapi_updated&repo=username/awesome-website
    ```
+
+## Background
+
+You can't point Strapi webhooks to the [repository dispatch event endpoint](https://docs.github.com/en/rest/reference/repos#create-a-repository-dispatch-event) as the webook request body is not compatible with the dispatches endpoint, thus a proxy is required.
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+## License
+
+See [LICENSE.md](./LICENSE.md)
