@@ -20,6 +20,7 @@ on:
 ```
 
 2. Create a GitHub Personal access token with `repo` scope
+
 3. Deploy the service to your server, for example:
 
 ```bash
@@ -28,6 +29,8 @@ docker run \
   --env GITHUB_TOKEN=YOURTOKEN \
   ghcr.io/badsyntax/strapi-webhook-actions-proxy:latest
 ```
+
+(View [available docker tags](https://github.com/users/badsyntax/packages/container/package/strapi-webhook-actions-proxy), or just use `latest`.)
 
 4. Create a new Webhook in Strapi that points to the service with the following query params:
 
