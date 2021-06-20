@@ -8,7 +8,7 @@
    ```
 4. Start the app: `DEBUG=strapi-webhook-actions-proxy:* npm start`
 
-## Testing Locally
+## Testing Locally
 
 ```json
 curl --header "Content-Type: application/json" \
