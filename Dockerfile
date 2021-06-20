@@ -44,6 +44,8 @@ LABEL org.opencontainers.image.source=https://github.com/badsyntax/strapi-webhoo
 COPY --from=builder --chown=node:node /app/node_modules /app/node_modules
 COPY --from=builder --chown=node:node /app/build /app/build
 
+ENV NODE_ENV production
+
 USER node
 
 CMD ["npm", "start"]
