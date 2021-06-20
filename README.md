@@ -10,7 +10,7 @@ Useful when you want to run a GitHub Actions workflow when changes are made in S
 
 ## Usage
 
-1. Ensure your GitHub Actions workflow file handles the "repository_dispatch" event with your custom type:
+1 - Ensure your GitHub Actions workflow file handles the "repository_dispatch" event with your custom type:
 
 ```yml
 name: Deploy
@@ -19,9 +19,9 @@ on:
     types: [strapi_updated]
 ```
 
-2. Create a GitHub Personal access token with `repo` scope
+2 - Create a GitHub Personal access token with `repo` scope
 
-3. Deploy the service to your server, for example:
+3 - Deploy the service to your server, for example:
 
 ```bash
 docker run \
@@ -32,7 +32,7 @@ docker run \
 
 (View [available docker tags](https://github.com/users/badsyntax/packages/container/package/strapi-webhook-actions-proxy), or just use `latest`.)
 
-4. Create a new Webhook in Strapi that points to the service with the following query params:
+4 - Create a new Webhook in Strapi that points to the service with the following query params:
 
    - `event_type`: Any string. This value must match the `repository_dispatch` type specified in your GitHub Actions workflow file.
    - `repo`: GitHub `username/repo`
