@@ -1,4 +1,4 @@
-FROM node:16.3.0-alpine as base
+FROM node:19.0.0-alpine as base
 
 
 FROM base AS deps
